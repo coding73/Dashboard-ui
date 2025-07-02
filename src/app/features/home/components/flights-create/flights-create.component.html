@@ -1,0 +1,56 @@
+<div id="flight-form-card">
+  <div class="flight-card px-4">
+  <h3 class="text-center">Add Flight Details</h3>
+
+  <form [formGroup]="flightForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Flight name</mat-label>
+      <input matInput formControlName="flightName" />
+      <mat-error class="mat-error mt-1" *ngIf="flightForm.get('flightName')?.invalid && flightForm.get('flightName')?.touched">
+        Flight name is required.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Flight start date</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="flightDate" />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+      <mat-error class="mat-error mt-1" *ngIf="flightForm.get('flightDate')?.invalid && flightForm.get('flightDate')?.touched">
+        Flight date is required.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Duration</mat-label>
+      <input matInput formControlName="duration" />
+      <mat-error class="mat-error mt-1" *ngIf="flightForm.get('duration')?.invalid && flightForm.get('duration')?.touched">
+        Duration is required.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Pilot name</mat-label>
+      <input matInput formControlName="pilotName" />
+      <mat-error class="mat-error mt-1" *ngIf="flightForm.get('pilotName')?.invalid && flightForm.get('pilotName')?.touched">
+        Pilot name is required.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Location</mat-label>
+      <input matInput formControlName="location" />
+      <mat-error class="mat-error mt-1" *ngIf="flightForm.get('location')?.invalid && flightForm.get('location')?.touched">
+        Location is required.
+      </mat-error>
+    </mat-form-field>
+
+    <div style="text-align: right;">
+      <button mat-raised-button color="primary" type="submit" [disabled]="flightForm.invalid">
+        Add
+      </button>
+    </div>
+
+  </form>
+</div>
+</div>

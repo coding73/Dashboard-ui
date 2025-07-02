@@ -26,7 +26,8 @@ export class HeaderComponent {
     private domSanitizer: DomSanitizer,
     private themeService: ThemeService,
     private translate: TranslateService,
-    private appService: AppService
+    private appService: AppService,
+    private router: Router
   ) {
     this.matIconRegistry.addSvgIcon('log-out',this.domSanitizer.bypassSecurityTrustResourceUrl('assets/svgs/log-out.svg'));
   }
@@ -40,7 +41,7 @@ export class HeaderComponent {
 
   /**
    * Method to change color
-   * @param color 
+   * @param color
    */
   changeColor(color: string) {
     this.themeService.applyTheme(color);
@@ -48,9 +49,13 @@ export class HeaderComponent {
 
   /**
    * Method to change language
-   * @param lang 
+   * @param lang
    */
   changeLanguage(lang: string) {
     this.translate.use(lang);
+  }
+
+  homePage() {
+    this.router.navigate(['/app/home'])
   }
 }

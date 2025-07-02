@@ -1,0 +1,20 @@
+<div class="main-container">
+    <!-- Ag grid -->
+    <ag-grid-angular #agGrid
+      style="width: 100%; height: calc(100vh - 200px)"
+      class="ag-theme-balham"
+      [rowData]="agGridOptions.results"
+      [columnDefs]="agGridOptions.columnDefs"
+      [animateRows]="animateRows"
+      [paginationAutoPageSize]="paginationAutoPageSize"
+      [paginationPageSize]="paginationPageSize"
+      [components]="components"
+      [pagination]="pagination">
+    </ag-grid-angular>
+    <!--/ Ag grid -->
+
+    <div class="pt-2 text-alig">
+     <button class="btn btn-success" (click)="downloadCsv('flight')">download</button>
+    </div>
+
+  </div>
