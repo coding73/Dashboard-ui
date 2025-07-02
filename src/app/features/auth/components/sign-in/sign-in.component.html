@@ -1,0 +1,42 @@
+<div id="login-page">
+  <div class="login-container d-flex flex-row justify-content-center align-items-center">
+    <div class="login-card p-5 align-content-center">
+      <h3>Login to account</h3>
+      <div>
+        <form [formGroup]="signInForm" (submit)="login()" class="d-flex flex-column">
+
+          <!-- User name -->
+          <mat-form-field appearance="outline">
+            <div class="d-flex flex-row">
+              <mat-icon class="input-icon">person</mat-icon>
+              <input matInput formControlName="email" placeholder="Enter email" required>
+              <mat-icon matSuffix class="change-icon" [ngStyle]="{ color: changedColor ? '#30be8e' : 'grey' }">check_circle</mat-icon>
+            </div>
+          </mat-form-field>
+          <!-- / User name -->
+
+          <!-- Password -->
+          <mat-form-field appearance="outline">
+            <div class="d-flex flex-row">
+              <mat-icon class="input-icon">lock</mat-icon>
+              <input matInput [type]="hidePassword ? 'password' : 'text'" formControlName="password" placeholder="Enter password" required />
+              <mat-icon matSuffix (click)="hidePassword = !hidePassword" class="change-icon">
+                {{ hidePassword ? "visibility" : "visibility_off"}}
+              </mat-icon>
+            </div>
+          </mat-form-field>
+          <!--/ Password -->
+
+          <!-- Button -->
+            <div class="d-flex justify-content-center align-items-center">
+              <button mat-raised-button color="primary" type="submit" class="px-5" [disabled]="signInForm.invalid">Login</button>
+            </div>
+            <!--/ Button -->
+        </form>
+      </div>
+      <div class="m-2 d-flex justify-content-center align-items-center">
+        <a [routerLink]="['/auth/signup']" routerLinkActive="router-link-active" >sign up</a>
+      </div>
+    </div>
+  </div>
+</div>

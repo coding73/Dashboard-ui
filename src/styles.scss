@@ -1,0 +1,59 @@
+/* You can add global styles to this file, and also import other style files */
+// @use '@angular/material' as mat;
+@use './themes/custom-material.scss' as cms;
+@use './themes/custom-aggrid.scss' as cas;
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
+html, body { 
+  height: 100%; 
+}
+
+body { 
+  margin: 0; 
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.custom-icon {
+  color: #DA0F0F;
+  line-height: 0px;
+}
+
+* {
+  font-family: 'Satoshi';
+}
+
+.mat-mdc-menu-panel .mat-mdc-menu-content {
+  padding: 0 !important;
+}
+
+.mat-mdc-menu-item {
+  height: 30px !important;
+}
+
+// Disable spin buttons (those up/down arrows) number type input field
+/* Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+
+  .swal-confirm-green {
+    background-color: #007F53 !important;
+    color: white !important;
+    border: none;
+  }
+
+  .swal-cancel-red {
+    background-color: #F44336 !important;
+    /* Red */
+    color: white !important;
+    border: none;
+  }
+}

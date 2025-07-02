@@ -1,0 +1,25 @@
+#login-page {
+
+  .login-container {
+    height: 100vh;
+  }
+
+  .login-card {
+    background-color: var(--login-bg-1);
+    border-radius: 10px;
+
+    h3 {
+      color: #474545;
+    }
+  }
+
+  .input-icon {
+    font-size: 1.25rem;
+    color: rgb(170, 213, 241);
+    margin-right: 8px;
+  }
+
+  .change-icon {
+    font-size: 1.12rem;
+  }
+}

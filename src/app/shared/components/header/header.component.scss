@@ -1,0 +1,13 @@
+#header-container {
+  height: 70px;
+  background-color:#1f5e4f;
+
+  .settings {
+    margin-right: 20px;
+    cursor: pointer;
+  }
+}
+
+::ng-deep .mat-mdc-menu-item {
+  border-bottom: 0.5px solid #d5d5d5 !important;
+}

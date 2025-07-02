@@ -1,0 +1,79 @@
+@use '@angular/material' as mat;
+@use './m3-theme.scss' as m3;
+
+@import "./partials/css-variables";
+
+:root {
+  --mat-select-trigger-text-size: 12px;
+  --mat-sidenav-container-width: 16.5%;
+  --mat-toolbar-standard-height: 50px;
+  --mat-toolbar-mobile-height: 50px;
+  --mdc-dialog-container-shape:2px;
+  --mat-form-field-container-height: 36px;
+  --mat-form-field-container-text-size: 12px;
+  --mat-form-field-container-radius:8px ;
+  --mdc-outlined-text-field-label-text-size: 12px;
+  --mat-radio-label-text-size: 12px;
+  --mat-form-field-subscript-text-size: 10px;
+  --mat-form-field-container-vertical-padding: 10px;
+  --mat-sidenav-container-shape: 0;
+  --mdc-outlined-text-field-container-shape: 6.4px;
+
+  .mat-mdc-select-arrow-wrapper {
+    height: inherit;
+  }
+
+  .mat-mdc-form-field-error-wrapper{
+    font-size: 10px;
+    margin-top: -5px;
+  }
+
+  .mat-mdc-text-field-wrapper {
+    max-height:var(--mat-form-field-container-height) 
+  }
+
+  .mat-mdc-dialog-surface {
+    height: auto !important;
+  }
+
+  mat-slide-toggle {
+    --mdc-switch-track-height:20px ;
+    --mdc-switch-track-width: 40px ;
+    --mat-switch-with-icon-handle-size:14px ;
+    --mdc-switch-state-layer-size: 16px;
+    --mdc-switch-unselected-icon-size: 0px;
+    --mdc-switch-selected-icon-size: 0px;
+    --mat-switch-pressed-handle-size: 16px;
+  }
+
+  --mdc-filled-text-field-container-color: none;
+
+  // Modify the material theme if the user prefers light theme
+  [prefers-color-scheme="light"] {
+    --mat-toolbar-container-background-color: var(--ap-primary-40);
+    --mat-sidenav-container-background-color: #F0FFF7;
+    --mat-sidenav-content-background-color: #FFFFFF;
+
+    --mdc-filled-button-container-shape: 4px;
+    --mat-autocomplete-background-color:white;
+    --mat-select-panel-background-color:white;
+    --mat-datepicker-calendar-container-background-color:white;
+
+    .mat-button-toggle-group-appearance-standard {
+      background-color: #F2F2F2;
+      --mat-standard-button-toggle-selected-state-background-color: var(--ap-primary-40);
+      --mat-standard-button-toggle-selected-state-text-color: var(--ap-primary-100);
+      --mat-standard-button-toggle-divider-color: var(--ap-primary-100);
+    }
+
+    --mat-sidenav-container-divider-color: #8E8C8C;
+    --mdc-outlined-text-field-outline-color: #8E8C8C;
+    --mdc-outlined-text-field-hover-outline-color: #8E8C8C;
+
+    .mdc-text-field--outlined:hover {
+      --mdc-outlined-text-field-outline-width: 2px;
+    }
+  }
+
+  --bs-font-sans-serif: "Satoshi";
+}

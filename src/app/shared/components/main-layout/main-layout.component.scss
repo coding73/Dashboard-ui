@@ -1,0 +1,56 @@
+#apmc-app-router {
+
+  .header-height {
+    height: 70px;
+  }
+
+  ::ng-deep mat-drawer-container {
+  height: calc(100vh - 115px);
+
+  .mat-drawer-content {
+    margin-left: 100px;
+    padding: 20px;
+    background-color: var(--main-body-bg-1);
+
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .mat-drawer {
+    border-radius: 0px;
+    box-shadow: 4px 0 6px rgba(0, 0, 0, 0.2);
+    background-color: var(--side-nav-bg-1);
+    width: 310px;
+  }
+
+  ::ng-deep .mat-drawer-inner-container {
+
+    &::-webkit-scrollbar {
+      width: 2px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.3);
+      border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar-button {
+      display: none;
+    }
+  }
+
+}
+
+  .footer-height {
+    height: 45px;
+  }
+}
